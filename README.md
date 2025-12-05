@@ -52,17 +52,17 @@ Beide Skripte richten isolierte Entwicklungsumgebungen ein, bauen die Komponente
 
   * EXPAT: `R_2_7_3`
   * GEOS: `3.14.1`
-  * PROJ: `9.7.0`
+  * PROJ: `9.7.1`
   * GDAL: `v3.12.0`
-  * MapServer: `rel-8-4-1`
+  * MapServer: `rel-8-6-0`
 
 * Git-Repositories:
 
   * [EXPAT](https://github.com/libexpat/libexpat.git) (Checkout: `R_2_7_3`)
   * [GEOS](https://github.com/libgeos/geos.git) (Checkout: `3.14.1`)
-  * [PROJ](https://github.com/OSGeo/PROJ.git) (Checkout: `9.7.0`)
+  * [PROJ](https://github.com/OSGeo/PROJ.git) (Checkout: `9.7.1`)
   * [GDAL](https://github.com/OSGeo/gdal.git) (Checkout: `v3.12.0`)
-  * [MapServer](https://github.com/MapServer/MapServer.git) (Checkout: `rel-8-4-1`)
+  * [MapServer](https://github.com/MapServer/MapServer.git) (Checkout: `rel-8-6-0`)
 
 * Build-Reihenfolge identisch mit Entwicklerversion, inkl. Tests und finalen Checks.
 
