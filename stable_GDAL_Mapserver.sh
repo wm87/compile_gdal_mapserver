@@ -7,9 +7,9 @@
 
 THREADS=6
 GEOS_VERSION="3.14.1"
-PROJ_VERSION="9.7.0"
+PROJ_VERSION="9.7.1"
 GDAL_VERSION="v3.12.0"
-MAPSERVER_VERSION="rel-8-4-1"
+MAPSERVER_VERSION="rel-8-6-0"
 EXPAT_VERSION="R_2_7_3"
 
 GEOS_PREFIX=/opt/geos
@@ -55,7 +55,7 @@ sudo apt-get -y install build-essential cmake git pkg-config wget curl unzip \
 	libzstd-dev libgeotiff-dev libsfcgal-dev libcrypto++-dev \
 	libpng-dev libgif-dev libspatialite-dev libminizip-dev sqlite3 libxerces-c-dev \
 	python3-pytest python3-pip python3-scipy python3-lxml \
-  python3-filelock python3-shapely python3-pyproj ccache
+	python3-filelock python3-shapely python3-pyproj ccache
 
 # Optional: Ninja + ccache for faster builds
 sudo apt-get -y install ninja-build ccache
@@ -107,8 +107,8 @@ cmake .. -G Ninja \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DCMAKE_INSTALL_PREFIX="$GEOS_PREFIX" \
 	-DCMAKE_INSTALL_RPATH="$GEOS_PREFIX/lib" \
-  -DCMAKE_C_COMPILER_LAUNCHER=ccache \
-  -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+	-DCMAKE_C_COMPILER_LAUNCHER=ccache \
+	-DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
 	-DBUILD_TESTING=OFF \
 	-DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON
 
@@ -172,8 +172,8 @@ cmake .. -G Ninja \
 	-DCMAKE_INSTALL_PREFIX="$GDAL_PREFIX" \
 	-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON \
 	-DCMAKE_INSTALL_RPATH="$GEOS_PREFIX/lib;$PROJ_PREFIX/lib;$GDAL_PREFIX/lib" \
-  -DCMAKE_C_COMPILER_LAUNCHER=ccache \
-  -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+	-DCMAKE_C_COMPILER_LAUNCHER=ccache \
+	-DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
 	-DGEOS_LIBRARY="$GEOS_PREFIX/lib/libgeos_c.so" \
 	-DGEOS_INCLUDE_DIR="$GEOS_PREFIX/include" \
 	-DPROJ_LIBRARY="$PROJ_PREFIX/lib/libproj.so" \
